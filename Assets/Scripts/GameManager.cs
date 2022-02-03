@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int MaxOp = 10;
     public int MinOp = 1;
     private int _op1Val,_op2Val;
+    public FinalScore FinalScore;
 
 
     void Start()
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
         if (value == _op1Val + _op2Val)
         {
             MessageText.text = "OK";
+            FinalScore.Setup(100);
         } else
         {
             MessageText.text = "NOK";
