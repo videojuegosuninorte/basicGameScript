@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 309222119}
   - component: {fileID: 309222120}
   m_Layer: 0
-  m_Name: GameLogic
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,12 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89d4898bb7ca0848a09b8f5b17133c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  op1: {fileID: 1619376252}
-  op2: {fileID: 44857744}
-  resultField: {fileID: 1118459195}
-  messageText: {fileID: 1223110823}
-  maxOp: 10
-  minOp: 1
+  OP1: {fileID: 1619376252}
+  OP2: {fileID: 44857744}
+  ResultField: {fileID: 1118459195}
+  MessageText: {fileID: 1223110823}
+  MaxOp: 10
+  MinOp: 1
 --- !u!1 &329013841
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 329013844}
   - component: {fileID: 329013843}
   m_Layer: 5
-  m_Name: equal
+  m_Name: Equal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 309222120}
-        m_TargetAssemblyTypeName: GameLogicScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: VerifyResult
         m_Mode: 1
         m_Arguments:
@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 1299103588}
   - component: {fileID: 1299103587}
   m_Layer: 5
-  m_Name: plus
+  m_Name: Plus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4f77abc1086d71744b33d570ba76e9c2, type: 3}
-    m_FontSize: 32
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
