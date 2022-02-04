@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int MinOp = 1;
     private int _op1Val,_op2Val;
     public FinalScore FinalScore;
+    private int _attempCount = 0;
 
 
     void Start()
@@ -31,9 +32,11 @@ public class GameManager : MonoBehaviour
         if (value == _op1Val + _op2Val)
         {
             MessageText.text = "OK";
-            FinalScore.Setup(100);
+            FinalScore.Setup(100 -_attempCount*10);
         } else
         {
+            _attempCount++;
+            MenuManager.Instance.setAttemp(_attempCount);
             MessageText.text = "NOK";
             ResultField.text = "";
         }
