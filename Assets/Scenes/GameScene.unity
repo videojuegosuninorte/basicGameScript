@@ -652,7 +652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The SUM Game
+  m_Text: The PLUS Game
 --- !u!222 &797684911
 CanvasRenderer:
   m_ObjectHideFlags: 0
