@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Text OP1;
     public Text OP2;
     public InputField ResultField;
@@ -18,11 +14,13 @@ public class GameManager : MonoBehaviour
     private int _attempCount = 0;
 
 
+    // Start is called just before any of the Update methods is called the first time
     void Start()
     {
         ResetGame();
     }
 
+    // called from the onSubmitt of the resultField 
     public void VerifyResult()
     {
         Debug.Log("VerifyResult");
@@ -32,11 +30,12 @@ public class GameManager : MonoBehaviour
         if (value == _op1Val + _op2Val)
         {
             MessageText.text = "OK";
+            // show the score board
             FinalScore.Setup(100 -_attempCount*10);
         } else
         {
             _attempCount++;
-            MenuManager.Instance.setAttemp(_attempCount);
+            MenuManager.Instance.SetAttemp(_attempCount);
             MessageText.text = "NOK";
             ResultField.text = "";
         }

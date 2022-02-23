@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +11,9 @@ public class MenuManager : MonoBehaviour
         Instance = this;
     }
 
-    public void setAttemp(int attempCount)
+    public void SetAttemp(int attempCount)
     {
         AttempScoreObject.GetComponentInChildren<Text>().text = "Attemps: "+attempCount.ToString();
     }
 }
+
